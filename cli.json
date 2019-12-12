@@ -116,7 +116,7 @@
     {
       "type": "code",
       "title": "Defined by package.json and npm install it",
-      "text": "package.json supports a \"bin\" property that can point at a file in the package and is going to turn that into a cli command",
+      "text": "package.json supports a \"bin\" property that can point at a file in the package and is going to turn that into a cli cmd\n\n[cyan]npm link[reset] will provide a system-wide cmd",
       "code": [
         "{",
         "  \"name\": \"the-foo-package\"",
@@ -141,6 +141,12 @@
       "title": "Composing commands with Pipelines",
       "text": "[cyan]xargs[reset] is your friend",
       "code": "alias printfile=\"find . -name *.js | grep $1 | xargs cat\""
+    },
+    {
+      "type": "code",
+      "title": "Composing commands with Pipelines",
+      "text": "[cyan]>[reset] can write down files easily",
+      "code": "alias makeiterror=\"cat \"$1\" | grep $1 | xargs cat\""
     },
     {
       "type": "list",
