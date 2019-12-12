@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
-    "cli-slides": "^1.0.4"
+    "cli-slides": "^1.0.4",
+    "offensive-words-filter": "^1.0.0"
   },
   "devDependencies": {},
   "scripts": {

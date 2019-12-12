@@ -54,10 +54,11 @@
       "type": "list",
       "title": "Let's get to it!",
       "list": [
+        "Understanding cli commands",
         "Defining a reusable command",
         "Compose commands with Unix Pipelines",
-        "Customize",
-        "Add Interactivity"
+        "Add Interactivity",
+        "Use Node.js 🚀"
       ]
     },
     {
@@ -75,8 +76,71 @@
     {
       "type": "code",
       "title": "Defining a command as bash function",
+      "text": "More versatile",
+      "code": [
+        "function status () {",
+        "  git status $1",
+        "}"
+      ]
+    },
+    {
+      "type": "code",
+      "title": "Using node",
+      "text": "We can use the node runner as one of the commands",
+      "code": [
+        "function printsafe () {",
+        "  node -p \"require('offensive-words-filter')('$1') ? '[blocked]' : '$1'\"",
+        "}"
+      ]
+    },
+    {
+      "type": "code",
+      "title": "Defining a command as a file",
+      "text": "Any executable file under a directory specified in you $PATH is going to become a valid command\nThis trick makes all your local cli modules available as commands:",
+      "code": "export PATH=$PATH:$(pwd)/node_modules/.bin"
+    },
+    {
+      "type": "code",
+      "title": "Define a package.json script",
+      "text": "Any package.json script can be run with [cyan]npm run <name>[reset]",
+      "code": [
+        "{",
+        "  \"name\": \"my-package\"",
+        "  \"version\": \"1.0.0\"",
+        "  \"scripts\": {",
+        "    \"hello\": \"echo 'Hello'\"",
+        "  }",
+        "}"
+      ]
+    },
+    {
+      "type": "code",
+      "title": "Defined by package.json and npm install it",
+      "text": "package.json supports a \"bin\" property that can point at a file in the package and is going to turn that into a cli command",
+      "code": [
+        "{",
+        "  \"name\": \"the-foo-package\"",
+        "  \"version\": \"1.0.0\"",
+        "  \"bin\": \"bin/foo\"",
+        "}"
+      ]
+    },
+    {
+      "type": "simple",
+      "title": "Composing commands with Pipelines",
+      "text": "Commands can be plugged together using the | operator"
+    },
+    {
+      "type": "code",
+      "title": "Composing commands with Pipelines",
       "text": "Customize a given command",
-      "code": "alias status=\"git status -s\""
+      "code": "alias getwordfile=\"find . -name *.js | grep $1\""
+    },
+    {
+      "type": "code",
+      "title": "Composing commands with Pipelines",
+      "text": "[cyan]xargs[reset] is your friend",
+      "code": "alias printfile=\"find . -name *.js | grep $1 | xargs cat\""
     },
     {
       "type": "list",
