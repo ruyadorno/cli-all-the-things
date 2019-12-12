@@ -185,12 +185,6 @@
     {
       "type": "code",
       "title": "Creating interactive composed commands",
-      "text": "Turning [cyan]cd[reset] into an interactive experience",
-      "code": "function icd() { cd $(ls | ipt); }"
-    },
-    {
-      "type": "code",
-      "title": "Creating interactive composed commands",
       "text": "Interactive switch git branches",
       "code": "function branchswitch() { git branch | ipt | xargs git checkout; }"
     },
@@ -218,7 +212,11 @@
       "text": "Crazy interactive install specific version",
       "code": [
         "function niv() {",
-        "  npm install ipt@$(node -p \"Object.keys($(pacote packument ipt | json versions)).join('\n')\" | ipt)",
+        "  npm install ipt@$(",
+        "    node -p \"Object.keys(",
+        "      $(pacote packument ipt | json versions)",
+        "    ).join('\\n')\" | ipt",
+        "  )",
         "}"
       ]
     },
