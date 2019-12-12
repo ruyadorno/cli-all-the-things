@@ -1,0 +1,17 @@
+{
+  "name": "the-one-with-cli-things",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "cli-slides": "^1.0.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "img": "node -e \"require('image-to-ascii')('/Users/ruyadorno/Downloads/avatar-120.jpg', { size: { width: '10%', height: '10%' } }, (err, res) => console.log(res))\"",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "cli-slides ./cli.json"
+  },
+  "author": "Ruy Adorno",
+  "license": "ISC"
+}
