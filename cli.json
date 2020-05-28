@@ -1,12 +1,12 @@
 {
   "title": "$ cli --tools --for all-the-things",
   "presenter": "Ruy Adorno",
-  "date": "December 12th",
-  "conference": "Node+JS Interactie",
-  "location": "Montreal ❤️ Canada",
+  "date": "May 28th",
+  "conference": "ForwardJS Summit 2020",
+  "location": "Online 🌎",
   "twitter": {
-    "presenter": "@ruyadorno",
-    "event": "#NodeJSInteractive"
+    "presenter": "@ruyadorno ",
+    "event": "@ForwardJS"
   },
   "slides": [
     {
@@ -18,7 +18,7 @@
       "left": {
         "title": "Hi, I'm Ruy",
         "list": [
-          "OSS Software Dev @ npm ❤️",
+          "npm cli team @ GitHub",
           "From Montreal",
           "npm: ~ruyadorno",
           "Twitter: @ruyadorno",
@@ -27,7 +27,7 @@
       },
       "right": {
         "text": [
-          "    .-\"\"\"\"\"-.",
+          "     .-\"\"\"\"\"-.",
           "    / _____/\\_\\",
           "   //`__   __ \\\\",
           "  //  (o) (o)  \\\\",
@@ -36,7 +36,7 @@
           "    `-._   _.-'",
           "    __.-)_(-,__ ",
           " ./'/   |_|   \\`\\.",
-          " /   `\"\"\"\"\"\"\"\"\"\"`  \\"
+          " /  `\"\"\"\"\"\"\"\"\"\"`  \\"
         ]
       }
     },
@@ -70,7 +70,7 @@
       "type": "list",
       "title": "The command line is an AMAZING user interface",
       "list": [
-        "user communication is based on words",
+        "communication is based on words",
         "developers are always looking to reuse things",
         "commands [yellow]are[reset] words"
       ]
